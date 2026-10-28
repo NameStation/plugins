@@ -21,7 +21,7 @@ Ask at most two or three short questions when the brief is thin: what it is, who
 |---|---|
 | Names with a domain they can register | `find_available_domains` |
 | Name ideas only, no domain check | `generate_name_ideas` |
-| To check specific domains, or names you came up with yourself | `check_domains` (up to 100, no credits) |
+| To check specific domains, or names you came up with yourself | `check_domains` (no credits; see the limits below) |
 | To know if a name is safe to use | `check_trademarks` (up to 10 names) |
 | To keep or share a shortlist | `save_name_list`, then share `share_url` |
 | To add to a list from earlier | `list_name_lists`, then `save_name_list` with `list_id` |
@@ -46,4 +46,7 @@ When the user asks for more, call the same tool again with every name already sh
 - `trial_required`: say NameStation needs a paid plan or its free 3-day trial, and give the `trial_url` from the result. This applies to generating names, checking domains, and screening trademarks.
 - `credits.insufficient`, `credits.org_cap`, or `capped`: say so plainly and give the link the tool returned.
 - `timeout`: retry once with a smaller `count` or fewer `extensions`.
+- `check_domains` takes up to 100 domains a call on .com, .net, .org, .info, .biz, and .us, and up to 50 a call on every other extension (.io, .ai, .co, .app, country codes). Domains over that come back in `not_checked`: call again with them before you say anything about them.
+- Most extensions can be checked. Domains on one NameStation cannot check come back in `unsupported`; tell the user, and suggest a common extension instead. The full list is at https://www.namestation.com/explore/extensions.
+- A domain with status `unchecked` could not be checked this time. Never call it available; try it again in a minute.
 - `find_available_domains` charges only when at least one domain is available. `credits_charged` and `credits_remaining` are in every result.

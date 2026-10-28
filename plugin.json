@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "namestation",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Brand names with domains that are actually available, trademark screening, and shareable shortlists from NameStation.",
   "author": {
     "name": "NameStation",
@@ -86,7 +86,7 @@
         "commerce_description": "The plugin does not sell products or take payments. Generating names spends credits from the user's existing NameStation plan."
       },
       "publication": {
-        "release_notes": "Clearer plan requirements: generating names, checking domains, and screening trademarks need a paid plan or the 3-day trial. Only generation uses credits. The skill now checks domains and trademarks for names the assistant comes up with itself."
+        "release_notes": "Clearer plan requirements: generating names, checking domains, and screening trademarks need a paid plan or the 3-day trial. Only generation uses credits. The skill now checks domains and trademarks for names the assistant comes up with itself, and knows the per-call domain limits (100 on .com, .net, .org, .info, .biz, and .us; 50 on other extensions) and which extensions can be checked."
       }
     }
   }

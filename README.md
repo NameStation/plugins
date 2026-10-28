@@ -5,7 +5,7 @@ Official [NameStation](https://www.namestation.com) plugin for AI assistants and
 AI assistants are good at inventing names, but they cannot tell whether a domain is taken, so many of the domains they suggest were registered years ago. This plugin connects your agent to NameStation, which checks every domain live. Your agent can:
 
 - **Generate brand names with domains you can register today.** NameStation's generator writes the names and checks each domain before the agent calls it available.
-- **Check the names your assistant thinks up.** When the agent brainstorms names itself, it checks their domains with NameStation, up to 100 at a time, and tells you which are available, taken, or listed for sale, with the price.
+- **Check the names your assistant thinks up.** When the agent brainstorms names itself, it checks their domains with NameStation and tells you which are available, taken, or listed for sale, with the price.
 - **Screen a shortlist for trademarks** against USPTO and EUIPO records before anyone gets attached to a name.
 - **Save picks to a NameStation list** and share one link with a cofounder, client, or team.
 
@@ -15,6 +15,12 @@ AI assistants are good at inventing names, but they cannot tell whether a domain
 - Generating names uses 10 credits per search, the same as on namestation.com. A search for available domains only charges when at least one comes back available.
 - Checking domains, screening trademarks, and saving lists use no credits. Domain checks have a daily allowance per connection.
 - When you approve an app, you choose the NameStation organization it bills and can set a monthly credit cap.
+
+## Domain checks
+
+- Most extensions can be checked, from .com, .io, and .ai to country codes. The full list is at [namestation.com/explore/extensions](https://www.namestation.com/explore/extensions).
+- One check covers up to 100 domains on .com, .net, .org, .info, .biz, and .us, and up to 50 on any other extension. The agent checks the rest in another call.
+- A domain is only reported available after a live check. One that could not be checked comes back as unchecked, never as available.
 
 ## Install
 
