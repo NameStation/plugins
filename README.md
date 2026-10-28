@@ -37,6 +37,12 @@ Setup guides for ChatGPT, Claude, Grok, Gemini, Slack, Windsurf, Antigravity, an
 | `skills/namestation-naming/` | The naming skill, shared by all of the above |
 | `server.json` | MCP Registry entry |
 
+## Network and credentials
+
+- The only network endpoint is the NameStation MCP server at `https://api.namestation.com/mcp`. Sign-in uses OAuth 2.1 with PKCE through `https://www.namestation.com/oauth/authorize`.
+- The plugin asks for no API keys, reads no local files or environment variables, and has no hooks, scripts, or install steps. It is JSON configuration and one Markdown skill.
+- On the approval screen you choose the NameStation organization to bill and an optional monthly credit cap. Revoke access any time in [Connected apps](https://www.namestation.com/settings/connected-apps).
+
 ## Support
 
 Questions or problems: [namestation.com/contact](https://www.namestation.com/contact). Manage or revoke connected apps in [Settings, Connected apps](https://www.namestation.com/settings/connected-apps).
