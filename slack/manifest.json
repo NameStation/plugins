@@ -1,0 +1,32 @@
+{
+  "display_information": {
+    "name": "NameStation",
+    "description": "Brand names, available domains, and trademark checks from Slackbot.",
+    "long_description": "Ask Slackbot to name your next product, company, or feature. NameStation generates brand names, checks which domains are actually available (including names for sale), screens shortlists against USPTO and EUIPO trademarks, and saves a shareable list your team can open. Each person connects their own NameStation account, so credits and caps follow the person who asked. Domain checks and trademark screening do not spend credits.",
+    "background_color": "#111827"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "NameStation",
+      "always_online": false
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["mcp:connect"]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  },
+  "mcp_servers": {
+    "namestation": {
+      "url": "https://api.namestation.com/mcp",
+      "auth": {
+        "type": "dynamic_client_registration"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "namestation",
+  "version": "1.2.0",
+  "description": "Brand names with domains that are actually available, trademark screening, and shareable shortlists from NameStation.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "namestation": {
+      "httpUrl": "https://api.namestation.com/mcp"
+    }
+  }
+}

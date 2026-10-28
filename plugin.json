@@ -1,0 +1,93 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "namestation",
+  "version": "1.2.0",
+  "description": "Brand names with domains that are actually available, trademark screening, and shareable shortlists from NameStation.",
+  "author": {
+    "name": "NameStation",
+    "url": "https://www.namestation.com"
+  },
+  "homepage": "https://www.namestation.com/integrations",
+  "repository": "https://github.com/namestation/plugins",
+  "license": "MIT",
+  "keywords": ["naming", "brand-names", "domains", "trademarks", "startup", "mcp"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "NameStation",
+        "shortDescription": "Brand names with available domains",
+        "longDescription": "Generate business, product, and brand names with NameStation, and only see a domain as available when you can register it today. Check domains you already have, screen a shortlist against USPTO and EUIPO trademarks, and save your picks to a NameStation list you can share. NameStation only acts on the account you connect, and spends credits only on name generation.",
+        "developerName": "NameStation",
+        "category": "Productivity",
+        "capabilities": ["Generate names", "Check domains", "Screen trademarks", "Save lists"],
+        "websiteURL": "https://www.namestation.com/integrations/chatgpt",
+        "supportURL": "https://www.namestation.com/contact",
+        "privacyPolicyURL": "https://www.namestation.com/privacy",
+        "termsOfServiceURL": "https://www.namestation.com/terms",
+        "defaultPrompt": [
+          "Find 10 one-word .com names for a cozy coffee shop in Portland.",
+          "Is brightnest.com taken? Check .io and .co too.",
+          "Screen my three favorite names for trademark conflicts."
+        ],
+        "brandColor": "#FF5C45",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Names with available domains",
+              "prompt": "Find 10 one-word .com names for a cozy coffee shop in Portland.",
+              "tools_triggered": "find_available_domains",
+              "expected_behavior": "Return up to 10 brand names whose .com domains are available, each with a registration link, and a link to see more on NameStation."
+            },
+            {
+              "description": "Check domains the user already has",
+              "prompt": "Is brightnest.com taken? Check .io and .co too.",
+              "tools_triggered": "check_domains",
+              "expected_behavior": "Report the live status of brightnest.com, brightnest.io, and brightnest.co, with the price when a domain is for sale."
+            },
+            {
+              "description": "Brainstorm without a domain check",
+              "prompt": "Brainstorm 15 playful names for a dog-walking app. I don't need domains yet.",
+              "tools_triggered": "generate_name_ideas",
+              "expected_behavior": "Return name ideas without claiming any domain is available."
+            },
+            {
+              "description": "Trademark screening",
+              "prompt": "Screen Lumora, Brightnest, and Kindling for trademark conflicts.",
+              "tools_triggered": "check_trademarks",
+              "expected_behavior": "Return a clear, caution, or risk verdict for each name from USPTO and EUIPO data, and say it is a screening, not legal advice."
+            },
+            {
+              "description": "Save a shareable shortlist",
+              "prompt": "Save Lumora and Brightnest to a list called Coffee shop names.",
+              "tools_triggered": "save_name_list",
+              "expected_behavior": "Create a NameStation list with both names and return its share link."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Domain purchase is not supported",
+              "prompt": "Buy brightnest.com for me with my card."
+            },
+            {
+              "description": "Legal advice is out of scope",
+              "prompt": "Tell me for certain that Lumora is legally safe to trademark worldwide."
+            },
+            {
+              "description": "Unrelated request",
+              "prompt": "Book a table for two at a restaurant tonight."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or take payments. Generating names spends credits from the user's existing NameStation plan."
+      },
+      "publication": {
+        "release_notes": "Brand name generation with live domain availability, domain checks, trademark screening, and shareable name lists."
+      }
+    }
+  }
+}

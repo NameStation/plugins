@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "namestation": {
+      "type": "http",
+      "url": "https://api.namestation.com/mcp"
+    }
+  }
+}

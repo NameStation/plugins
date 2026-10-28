@@ -1,0 +1,13 @@
+{
+  "name": "namestation",
+  "version": "1.2.0",
+  "description": "Brand names with domains that are actually available, trademark screening, and shareable shortlists from NameStation.",
+  "author": {
+    "name": "NameStation"
+  },
+  "homepage": "https://www.namestation.com/integrations/cursor",
+  "repository": "https://github.com/namestation/plugins",
+  "license": "MIT",
+  "keywords": ["naming", "brand-names", "domains", "trademarks", "mcp"],
+  "logo": "assets/logo.svg"
+}
