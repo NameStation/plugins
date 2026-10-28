@@ -5,7 +5,7 @@ Official [NameStation](https://www.namestation.com) plugin for AI assistants and
 AI assistants are good at inventing names, but they cannot tell whether a domain is taken, so many of the domains they suggest were registered years ago. This plugin connects your agent to NameStation, which checks every domain live. Your agent can:
 
 - **Generate brand names with domains you can register today.** NameStation's generator writes the names and checks each domain before the agent calls it available.
-- **Verify names from any AI tool.** Paste the domains ChatGPT, Gemini, or a brainstorm suggested, up to 100 at a time, and see which are available, taken, or listed for sale, with the price.
+- **Check the names your assistant thinks up.** When the agent brainstorms names itself, it checks their domains with NameStation, up to 100 at a time, and tells you which are available, taken, or listed for sale, with the price.
 - **Screen a shortlist for trademarks** against USPTO and EUIPO records before anyone gets attached to a name.
 - **Save picks to a NameStation list** and share one link with a cofounder, client, or team.
 
@@ -37,12 +37,12 @@ Setup guides for ChatGPT, Claude, Gemini, Grok, Slack, Windsurf, Antigravity, an
 ## What to ask
 
 - "Find 10 one-word .com names for a cozy coffee shop in Portland."
-- "ChatGPT suggested brewnook.com, kindlecup.com, and emberbean.com. Which can I actually register?"
+- "Is brightnest.com taken? Check .io and .co too."
 - "More like Brightnest, but shorter. Skip anything you already showed me."
 - "Screen Lumora, Brightnest, and Kindling for trademark conflicts."
 - "Save my three favorites to a list I can send to my cofounder."
 
-The naming skill guides the agent through the session: it gathers a short brief, picks the right tool, skips names it already showed, and only calls a domain available when NameStation returned it as available.
+The naming skill guides the agent through the session: it gathers a short brief, picks the right tool, skips names it already showed, and checks the domain of any name it came up with itself before suggesting it. It only calls a domain available when NameStation returned it as available.
 
 ## What's inside
 

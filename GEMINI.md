@@ -21,7 +21,7 @@ Ask at most two or three short questions when the brief is thin: what it is, who
 |---|---|
 | Names with a domain they can register | `find_available_domains` |
 | Name ideas only, no domain check | `generate_name_ideas` |
-| To check domains they pasted, or that another AI or a brainstorm suggested | `check_domains` (up to 100, no credits) |
+| To check specific domains, or names you came up with yourself | `check_domains` (up to 100, no credits) |
 | To know if a name is safe to use | `check_trademarks` (up to 10 names) |
 | To keep or share a shortlist | `save_name_list`, then share `share_url` |
 | To add to a list from earlier | `list_name_lists`, then `save_name_list` with `list_id` |
@@ -36,7 +36,7 @@ When the user asks for more, call the same tool again with every name already sh
 ## 4. Present results
 
 - Show 5 to 10 picks. Give each a one-line reason.
-- Show the domain and its status as returned. Never claim a domain is available unless the tool returned `available: true`. That includes domains from your own ideas or another assistant: run `check_domains` on them first.
+- Show the domain and its status as returned. Never claim a domain is available unless the tool returned `available: true`. That includes names you came up with yourself: run `check_domains` on them first, and `check_trademarks` on the ones you recommend as a brand.
 - For `for_sale` or `premium` domains, show the price when there is one and say it is a purchase, not a registration.
 - Include `register_url` or `buy_url` when present, and always include `more_url` (or the list's `share_url`) so they can keep going on NameStation.
 - Before the user commits to a name, offer `check_trademarks`. Report the verdict (`clear`, `caution`, `risk`) and say it is a screening, not legal advice.

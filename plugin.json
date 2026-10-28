@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "namestation",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Brand names with domains that are actually available, trademark screening, and shareable shortlists from NameStation.",
   "author": {
     "name": "NameStation",
@@ -16,7 +16,7 @@
       "interface": {
         "displayName": "NameStation",
         "shortDescription": "Brand names with available domains",
-        "longDescription": "Generate business, product, and brand names with NameStation, and only see a domain as available when you can register it today. Verify domains suggested by any AI tool or brainstorm, screen a shortlist against USPTO and EUIPO trademarks, and save your picks to a NameStation list you can share. Needs a NameStation paid plan or the free 3-day trial. Only name generation uses credits.",
+        "longDescription": "Generate business, product, and brand names with NameStation, and only see a domain as available when you can register it today. When the assistant brainstorms names itself, it can check their domains live, screen a shortlist against USPTO and EUIPO trademarks, and save your picks to a NameStation list you can share. Needs a NameStation paid plan or the free 3-day trial. Only name generation uses credits.",
         "developerName": "NameStation",
         "category": "Productivity",
         "capabilities": ["Generate names", "Check domains", "Screen trademarks", "Save lists"],
@@ -43,10 +43,10 @@
               "expected_behavior": "Return up to 10 brand names whose .com domains are available, each with a registration link, and a link to see more on NameStation."
             },
             {
-              "description": "Verify domains suggested elsewhere",
-              "prompt": "Another assistant suggested brewnook.com, kindlecup.com, and emberbean.com. Which can I actually register?",
+              "description": "Check specific domains",
+              "prompt": "Is brightnest.com taken? Check .io and .co too.",
               "tools_triggered": "check_domains",
-              "expected_behavior": "Report the live status of each domain, with a registration link for available ones and the price when a domain is listed for sale."
+              "expected_behavior": "Report the live status of brightnest.com, brightnest.io, and brightnest.co, with a registration link for available ones and the price when a domain is listed for sale."
             },
             {
               "description": "Brainstorm without a domain check",
@@ -86,7 +86,7 @@
         "commerce_description": "The plugin does not sell products or take payments. Generating names spends credits from the user's existing NameStation plan."
       },
       "publication": {
-        "release_notes": "Clearer plan requirements: generating names, checking domains, and screening trademarks need a paid plan or the 3-day trial. Only generation uses credits. Domain checks are framed around verifying domains suggested by other AI tools."
+        "release_notes": "Clearer plan requirements: generating names, checking domains, and screening trademarks need a paid plan or the 3-day trial. Only generation uses credits. The skill now checks domains and trademarks for names the assistant comes up with itself."
       }
     }
   }
