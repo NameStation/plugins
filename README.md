@@ -14,7 +14,7 @@ AI assistants are good at inventing names, but they cannot tell whether a domain
 - A NameStation account on a paid plan or the free 3-day trial. If your account needs the trial, the sign-in screen offers it and brings you back to finish connecting.
 - Generating names uses 10 credits per search, the same as on namestation.com. A search for available domains only charges when at least one comes back available.
 - Checking domains, screening trademarks, and saving lists use no credits. Domain checks have a daily allowance per connection.
-- When you approve an app, you choose the NameStation organization it bills and can set a monthly credit cap.
+- When you approve an app, you choose the NameStation organization it bills. You can add a monthly credit cap later in Connected apps.
 
 ## Domain checks
 
